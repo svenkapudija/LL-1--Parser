@@ -2,6 +2,9 @@
 
 public class LL1_Parser implements SequenceParser {
 
+	private final static String SUCCESS = "YES";
+	private final static String FAILURE = "NO";
+	
 	private InputSequence inputSequence;
 
 	@Override
@@ -12,9 +15,9 @@ public class LL1_Parser implements SequenceParser {
 		
 		System.out.println();
 		if(inputSequence.hasMoreSymbols()) {
-			System.out.println("NE");
+			System.out.println(FAILURE);
 		} else {
-			System.out.println("DA");
+			System.out.println(SUCCESS);
 		}
 	}
 	
@@ -99,7 +102,7 @@ public class LL1_Parser implements SequenceParser {
 	
 	private void sequenceIsNotInLanguage() {
 		System.out.println();
-		System.out.println("NE");
+		System.out.println(FAILURE);
 		System.exit(1);
 	}
 	
