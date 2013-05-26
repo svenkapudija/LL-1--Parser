@@ -35,7 +35,6 @@ public class LL1_Parser implements SequenceParser {
 			A();
 		} else {
 			sequenceIsNotInLanguage();
-			return;
 		}
 	}
 	
@@ -53,7 +52,6 @@ public class LL1_Parser implements SequenceParser {
 			C();
 		} else {
 			sequenceIsNotInLanguage();
-			return;
 		}
 	}
 	
@@ -74,21 +72,18 @@ public class LL1_Parser implements SequenceParser {
 			S();
 		} else {
 			sequenceIsNotInLanguage();
-			return;
 		}
 		
 		if(inputSequence.getCurrentSymbol() == 'b') {
 			inputSequence.moveHeadToNextSymbol();
 		} else {
 			sequenceIsNotInLanguage();
-			return;
 		}
 		
 		if(inputSequence.getCurrentSymbol() == 'c') {
 			inputSequence.moveHeadToNextSymbol();
 		} else {
 			sequenceIsNotInLanguage();
-			return;
 		}
 	}
 	
@@ -105,6 +100,7 @@ public class LL1_Parser implements SequenceParser {
 	private void sequenceIsNotInLanguage() {
 		System.out.println();
 		System.out.println("NE");
+		System.exit(1);
 	}
 	
 }
