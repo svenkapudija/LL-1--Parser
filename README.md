@@ -1,8 +1,12 @@
 LL(1) Parser
 ============
 
-Solution for the third lab at "Introduction to Theoretical Computer Science" course - LL(1) parser.
+Solution for the third lab at "Introduction to Theoretical Computer Science" course - LL(1) parser for grammar
 
+    S -> aAB | bBA
+    A -> bC | a
+    B -> ccSbc | ϵ
+    C -> AA
 
 Example 1
 ------
